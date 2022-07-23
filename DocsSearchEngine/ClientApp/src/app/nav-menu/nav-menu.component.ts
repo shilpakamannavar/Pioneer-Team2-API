@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchDocsService } from '../shared/search-docs.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -6,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent {
-  isExpanded = false;
+
+    constructor(private searchDocsService:SearchDocsService) { }
+    isExpanded = false;
+    searchQuery: string = "";
 
   collapse() {
     this.isExpanded = false;
@@ -14,5 +18,9 @@ export class NavMenuComponent {
 
   toggle() {
     this.isExpanded = !this.isExpanded;
-  }
+    }
+
+    onSearch() {
+        this.searchDocsService.GetResults(this.searchQuery);
+    }
 }

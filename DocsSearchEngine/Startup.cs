@@ -1,3 +1,7 @@
+using DocsSearchEngine.Agent;
+using DocsSearchEngine.BusinessLogic.Interfaces;
+using DocsSearchEngine.BusinessLogic.Managers;
+using DocsSearchEngine.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -38,6 +42,10 @@ namespace DocsSearchEngine
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.Configure<AzureSearchConfig>(Configuration.GetSection("AzureSearchConfig"));
+
+            services.AddScoped<IAzureSearchClient, AzureSearchClient>();
+            services.AddScoped<ISearchDocManager, SearchDocManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DocsSearchEngine.BusinessLogic.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace DocsSearchEngine.Controllers
 {
@@ -7,16 +9,28 @@ namespace DocsSearchEngine.Controllers
     [Route("api/[controller]")]
     public class SearchDocsController : ControllerBase
     {
-        private readonly ILogger<SearchDocsController> _logger;
-        public SearchDocsController(ILogger<SearchDocsController> logger)
+        private readonly ILogger<SearchDocsController> logger;
+
+        private readonly ISearchDocManager searchDocManager;
+        public SearchDocsController(ILogger<SearchDocsController> logger, ISearchDocManager searchDocManager)
         {
-            this._logger = logger;
+            this.logger = logger;
+            this.searchDocManager = searchDocManager;
         }
 
         [HttpPost]
-        public ActionResult GetRsults() {
+        public async Task<IActionResult> GetRsults( DocsSearchEngine.Models.SearchFilter searchFilter)
+        {
+            try
+            {
+                var results = await searchDocManager.Execute(searchFilter.Content);
+                return Ok(results);
+            }
+            catch (System.Exception)
+            {
 
-            return null;
-        }        
+                throw;
+            }
+        }
     }
 }

@@ -11,3 +11,6 @@
 /DocsSearchEngine/bin/Debug/netcoreapp3.1
 /DocsSearchEngine/obj
 /DocsSearchEngine/ClientApp/node_modules
+/.vs
+/DocsSearchEngine.Models/obj
+/DocsSearchEngine.BusinessLogic/bin/Debug/netcoreapp3.1

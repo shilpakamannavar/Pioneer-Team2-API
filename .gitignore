@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DocsSearchEngine.BusinessLogic/obj
+/DocsSearchEngine.Models/bin/Debug/netcoreapp3.1
+/DocsSearchEngine.Models/obj/Debug/netcoreapp3.1
+/DocsSearchEngine.Models/obj/Release/netcoreapp3.1
+/DocsSearchEngine.Agent/obj
+/DocsSearchEngine.Agent/bin/Debug/netcoreapp3.1
+/DocsSearchEngine/bin/Debug/netcoreapp3.1
+/DocsSearchEngine/obj
+/DocsSearchEngine/ClientApp/node_modules

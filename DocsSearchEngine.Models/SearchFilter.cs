@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace DocsSearchEngine.Models
 {
+    [ExcludeFromCodeCoverage]
     public class SearchFilter
     {
         public string Content { get; set; }

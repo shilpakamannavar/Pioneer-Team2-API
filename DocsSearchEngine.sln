@@ -5,11 +5,17 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocsSearchEngine", "DocsSearchEngine\DocsSearchEngine.csproj", "{C7C6EEEE-69B9-4F1C-9BFA-4C0F4CD210A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocsSearchEngine.BusinessLogic", "DocsSearchEngine.BusinessLogic\DocsSearchEngine.BusinessLogic.csproj", "{2AA2F3A8-D431-41DD-A7BA-4B3426F568AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocsSearchEngine.BusinessLogic", "DocsSearchEngine.BusinessLogic\DocsSearchEngine.BusinessLogic.csproj", "{2AA2F3A8-D431-41DD-A7BA-4B3426F568AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocsSearchEngine.Models", "DocsSearchEngine.Models\DocsSearchEngine.Models.csproj", "{14748823-BD58-440D-A773-5928B3BBD275}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocsSearchEngine.Models", "DocsSearchEngine.Models\DocsSearchEngine.Models.csproj", "{14748823-BD58-440D-A773-5928B3BBD275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocsSearchEngine.Agent", "DocsSearchEngine.Agent\DocsSearchEngine.Agent.csproj", "{E297E72E-997E-427B-BF65-AC57345F42B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocsSearchEngine.Agent", "DocsSearchEngine.Agent\DocsSearchEngine.Agent.csproj", "{E297E72E-997E-427B-BF65-AC57345F42B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1B4B79C-D06F-43E8-A484-2AC413A93820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocsSearchEngine.Tests", "Tests\DocsSearchEngine\DocsSearchEngine.Tests.csproj", "{8F0371B3-2274-4CC9-9DDE-111950F1D74C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocsSearchEngine.BusinessLogic.Tests", "Tests\DocsSearchEngine.BusinessLogic.Tests\DocsSearchEngine.BusinessLogic.Tests.csproj", "{E75363FE-14D7-45C5-A78E-5110086D30A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,21 @@ Global
 		{E297E72E-997E-427B-BF65-AC57345F42B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E297E72E-997E-427B-BF65-AC57345F42B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E297E72E-997E-427B-BF65-AC57345F42B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0371B3-2274-4CC9-9DDE-111950F1D74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0371B3-2274-4CC9-9DDE-111950F1D74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0371B3-2274-4CC9-9DDE-111950F1D74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0371B3-2274-4CC9-9DDE-111950F1D74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75363FE-14D7-45C5-A78E-5110086D30A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75363FE-14D7-45C5-A78E-5110086D30A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75363FE-14D7-45C5-A78E-5110086D30A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75363FE-14D7-45C5-A78E-5110086D30A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F0371B3-2274-4CC9-9DDE-111950F1D74C} = {D1B4B79C-D06F-43E8-A484-2AC413A93820}
+		{E75363FE-14D7-45C5-A78E-5110086D30A2} = {D1B4B79C-D06F-43E8-A484-2AC413A93820}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {59D7E90F-8628-4D59-A1B6-587F8D86C0CE}

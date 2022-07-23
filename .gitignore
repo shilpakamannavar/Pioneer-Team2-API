@@ -14,3 +14,4 @@
 /.vs
 /DocsSearchEngine.Models/obj
 /DocsSearchEngine.BusinessLogic/bin/Debug/netcoreapp3.1
+/Tests/DocsSearchEngine/obj
